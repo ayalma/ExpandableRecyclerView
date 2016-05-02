@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="exr_listItemHeight">48dp</dimen>
+    <dimen name="exr_mediumListItemHeight">64dp</dimen>
+    <dimen name="exr_largeListItemHeight">72dp</dimen>
+
+    <dimen name="exr_margin">16dp</dimen>
+    <dimen name="exr_iconSize">24dp</dimen>
+
+
+</resources>
