@@ -13,8 +13,8 @@ import java.util.List;
 import ayalma.ir.expandablerecyclerview.ExpandableRecyclerView;
 
 
-public class MainActivity extends AppCompatActivity {
-    private static List<String> fruits = new ArrayList<>(Arrays.asList("Strawberry", "Apple", "Orange", "Lemon", "Beer", "Lime", "Watermelon", "Blueberry", "Plum"));
+public class MainActivity extends AppCompatActivity
+{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,13 +22,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-
 
         final ExpandableRecyclerView recyclerView = (ExpandableRecyclerView) findViewById(R.id.recyclerView);
+        assert recyclerView != null;
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        final ExpandableFruitAdapter fruitAdapter = new ExpandableFruitAdapter(fruits);
-        recyclerView.setAdapter(fruitAdapter);
+        final ExpandableTestAdapter testAdapter = new ExpandableTestAdapter();
+        recyclerView.setAdapter(testAdapter);
     }
 
 }

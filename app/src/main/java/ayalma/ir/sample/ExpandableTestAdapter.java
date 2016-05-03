@@ -11,34 +11,35 @@ import java.util.List;
 import ayalma.ir.expandablerecyclerview.ExpandableRecyclerView;
 
 /**
- * Created by Marcin on 2015-05-09.
+ * Created by alimohammadi on 2015-05-09.
+ *
+ * @author alimohammadi.
  */
-public class ExpandableFruitAdapter extends ExpandableRecyclerView.Adapter<ExpandableFruitAdapter.ChildViewHolder, ExpandableRecyclerView.SimpleGroupViewHolder, String, String> {
-    private List<String> fruits;
+public class ExpandableTestAdapter extends ExpandableRecyclerView.Adapter<ExpandableTestAdapter.ChildViewHolder, ExpandableRecyclerView.SimpleGroupViewHolder, String, String> {
 
-    public ExpandableFruitAdapter(List<String> fruits) {
-        this.fruits = fruits;
+    public ExpandableTestAdapter() {
     }
 
 
     @Override
     public int getGroupItemCount() {
-        return fruits.size();
+        return 6;
     }
 
     @Override
     public int getChildItemCount(int group) {
-        return 3;
+        return group+1;
     }
 
     @Override
     public String getGroupItem(int position) {
-        return fruits.get(position);
+        return "group :" + position;
     }
 
     @Override
-    public String getChildItem(int group, int position) {
-        return "Subitem " + position;
+    public String getChildItem(int group, int position)
+    {
+        return "group : "+ group + " item" + position;
     }
 
     @Override
@@ -47,7 +48,8 @@ public class ExpandableFruitAdapter extends ExpandableRecyclerView.Adapter<Expan
     }
 
     @Override
-    protected ChildViewHolder onCreateChildViewHolder(ViewGroup parent, int viewType) {
+    protected ChildViewHolder onCreateChildViewHolder(ViewGroup parent, int viewType)
+    {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.row_drawer, parent, false);
         return new ChildViewHolder(view);
@@ -61,15 +63,13 @@ public class ExpandableFruitAdapter extends ExpandableRecyclerView.Adapter<Expan
     @Override
     public void onBindGroupViewHolder(ExpandableRecyclerView.SimpleGroupViewHolder holder, int group) {
         super.onBindGroupViewHolder(holder, group);
-        ExpandableRecyclerView.SimpleGroupViewHolder h = holder;
-        h.setText(getGroupItem(group));
+        holder.setText(getGroupItem(group));
     }
 
     @Override
     public void onBindChildViewHolder(ChildViewHolder holder, int group, final int position) {
         super.onBindChildViewHolder(holder, group, position);
-        ChildViewHolder h = holder;
-        h.tv.setText(getChildItem(group, position));
+        holder.tv.setText(getChildItem(group, position));
     }
 
     public class ChildViewHolder extends RecyclerView.ViewHolder {

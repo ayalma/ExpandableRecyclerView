@@ -213,7 +213,7 @@ public class ExpandableRecyclerView extends android.support.v7.widget.RecyclerVi
         public int getItemCount()
         {
             int count = 0;
-            for (int i = 0; i < getGroupItemCount(); i++)
+            for (int i = 0; i <= getGroupItemCount(); i++)
             {
                 count += isExpanded(i) ? getChildItemCount(i) + 1 : 1;
             }
@@ -227,7 +227,7 @@ public class ExpandableRecyclerView extends android.support.v7.widget.RecyclerVi
         public Object getItem(int i)
         {
             int group = 0;
-            while (group < getGroupItemCount())
+            while (group <= getGroupItemCount())
             {
                 if (i > 0 && !isExpanded(group)) {
                     i--;
@@ -252,7 +252,7 @@ public class ExpandableRecyclerView extends android.support.v7.widget.RecyclerVi
         public void onBindViewHolder(ViewHolder holder, int i)
         {
             int group = 0;
-            while (group < getGroupItemCount())
+            while (group <= getGroupItemCount())
             {
                 if (i > 0 && !isExpanded(group))
                 {
@@ -295,7 +295,7 @@ public class ExpandableRecyclerView extends android.support.v7.widget.RecyclerVi
         public int getItemViewType(int i)
         {
             int group = 0;
-            while (group < getGroupItemCount()) {
+            while (group <= getGroupItemCount()) {
                 if (i > 0 && !isExpanded(group)) {
                     i--;
                     group++;
