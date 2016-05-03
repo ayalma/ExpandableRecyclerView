@@ -22,7 +22,7 @@ then add this ```     compile 'com.github.ayalma:ExpandableRecyclerView:0.2.0' `
 ```
 dependencies {
    // other dependencies name ....
-    compile 'com.github.ayalma:ExpandableRecyclerView:0.1.0'
+    compile 'com.github.ayalma:ExpandableRecyclerView:0.2.0'
 }
 ```
 ###Usage
