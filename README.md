@@ -2,8 +2,8 @@
 implemention of ExpandableRecyclerView for android
 
 #Samples
-![preview 1](https://github.com/ayalma/ExpandableRecyclerView/blob/master/images/device-2016-05-03-110818.png)
-![gif preview](https://github.com//ayalma/ExpandableRecyclerView/blob/master/images/output.gif)
+![preview 1](images/device-2016-05-03-110818.png)
+![gif preview](images/output.gif)
 
 ### [Installation]
 for importing this library in your android studio 
