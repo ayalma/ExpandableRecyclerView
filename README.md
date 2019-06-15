@@ -17,12 +17,12 @@ allprojects {
     }
 }
 ```
-then add this ```     compile 'com.github.ayalma:ExpandableRecyclerView:0.2.0' ``` to your app level gradle file as below.
+then add this ```     compile 'com.github.ayalma:ExpandableRecyclerView:0.3.0' ``` to your app level gradle file as below.
 
 ```
 dependencies {
    // other dependencies name ....
-    compile 'com.github.ayalma:ExpandableRecyclerView:0.2.0'
+    compile 'com.github.ayalma:ExpandableRecyclerView:0.3.0'
 }
 ```
 ###Usage

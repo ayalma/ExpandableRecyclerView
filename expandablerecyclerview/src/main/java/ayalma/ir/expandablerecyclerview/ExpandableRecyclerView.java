@@ -3,9 +3,9 @@ package ayalma.ir.expandablerecyclerview;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.util.SparseBooleanArray;
 import android.view.View;
@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.nineoldandroids.animation.ValueAnimator;
 import com.nineoldandroids.view.ViewHelper;
 
-public class ExpandableRecyclerView extends android.support.v7.widget.RecyclerView
+public class ExpandableRecyclerView extends RecyclerView
 {
 
 
@@ -136,7 +136,7 @@ public class ExpandableRecyclerView extends android.support.v7.widget.RecyclerVi
 
 
     @Override
-    public void setAdapter(android.support.v7.widget.RecyclerView.Adapter adapter)
+    public void setAdapter(RecyclerView.Adapter adapter)
     {
         if (!(adapter instanceof Adapter))
             throw new IllegalArgumentException("adapter has to be of type ExpandableRecyclerView.Adapter");
